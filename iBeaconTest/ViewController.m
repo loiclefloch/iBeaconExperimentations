@@ -26,8 +26,6 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-
-
     // This location manager will be used to notify the user of region state transitions.
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
@@ -45,7 +43,7 @@
     self.beaconRegion.notifyEntryStateOnDisplay = true;
 
     [self.locationManager startMonitoringForRegion:self.beaconRegion];
-    [self.locationManager startRangingBeaconsInRegion:self.beaconRegion ];
+    [self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
